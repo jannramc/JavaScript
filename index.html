@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Simulador de Préstamos para Colombia</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo_ppal" id="t_ppal">SIMULADOR DE PRESTAMOS PARA COLOMBIA</h1>
+        <h2 class="titulo_ppal" id="sub_ppal">Te invitamos a probarlo!!</h2>
+        <div id="log_prestamo">
+            <img src="img/logo_prestamo.png" width="400" height="200">
+        </div>
+    </header>
+    
+    
+    <div draggable="true" id="btnstartpage">
+        &#187
+    </div>
+    <div draggable="true" id="alerta"> 
+        <div>
+            <div class="btncerrar">X</div>
+            <div id="mensajealerta">This is a message</div>
+        </div>
+    </div>
+
+    <div id="contenedor"> 
+        <form id="forma1">
+            <legend>
+                <p class="subtitulo">Con esta herramienta puede calculare la cuota mensual aproximada de su crédito.</p>
+            </legend>
+            <div>
+                <div>
+                    <label>Valor del préstamo</label>
+                    <div class="label_presta">
+                        <input id="idMonto" onpaste="return false" class="inputBox2" onmouseover="this.style.textAlign='center';" onkeypress="return acceptNum(event);">
+                    </div>
+                </div>
+                    <div>
+                        <label>Plazo (en meses)</label>      
+                        <div class="label_presta">
+                            <input id="idPlazo" onpaste="return false" onkeypress="return acceptNum(event);" class="inputBox2" onmouseover="this.style.textAlign='center';">
+                        </div>
+                    </div>
+                    <div>
+                        <label>Tasa de interés(%)</label>
+                        <div class="label_presta">
+                            <input id="idTasa" onpaste="return false" class="inputBox2" onmouseover="this.style.textAlign='center';" onkeypress="return acceptNum(event);">
+                        </div>
+                    </div>
+            </div>
+        <br>
+
+            <div class="botones">     
+                <div align="left">
+                    <input id="idCalcular" type="button" onclick="Calcular();" value="CALCULAR" class="btnCalcu">
+                </div>
+                <div align="center" style="padding-right:20px;">
+                    <input type="reset" value="RESETEAR" name="R2" class="btnRest" onclick="document.getElementById('idResultado').innerHTML='';">
+                </div>
+                <div align="right" style="padding-right:10px;">
+                    <a href="Javascript:self.close();"><input id="btncerrar" type="button" value="CERRAR" class="btnClose">
+                </div>
+            </div>
+        
+            <div id="idResultado">
+
+            </div>
+        </form>   
+ 
+            <script type="text/javascript" src="/resources/js/libs/citi_s_codeB.js"></script>
+            <script type="text/javascript">
+                    s.pageName ='Simulador plan de pagos prestamos';
+                    s.eVar4 = "Simulador plan de pagos prestamos";
+                    s.events="event17";
+                    let s_code=s.t();if(s_code)document.write(s_code);
+            </script>
+    
+        </div>
+    </div>
+
+    <script src="./js/cd.js"></script>
+</body>
+</html>
