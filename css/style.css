@@ -1,7 +1,11 @@
-body {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    font-family: "Rubik",sans-serif;
+}
+
+body {
 	background-color:#edf8ff;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-size:11px;
@@ -12,17 +16,24 @@ body {
     }
 
 #t_ppal {
-color: blue;
+color: #1C1678;
 }
 
 #sub_ppal {
-    color: cadetblue;
+    color: #8576FF;
 }
 
-#log_prestamo {
+#log_prestamo, #log_cruzCara, #idBtnPrestamo {
     text-align: center;
     display: block;
 
+}
+
+#prestamo, #cruzCara
+{ 
+    width: 400px;
+    height: 200px;
+    padding: 15px;
 }
 
 .tablemain tr:hover td{
@@ -96,7 +107,6 @@ color: blue;
 
 #mensajealerta{
   font-size: 16px;
-
 }
 
 #idmonto {
@@ -149,8 +159,8 @@ color: blue;
 .subtitulo
 {
 	font-size:13px;
-	color:##666666;
-	margin-left: 20px;
+	color:#666666;
+	margin-left:20px
 }
 
 
@@ -191,7 +201,7 @@ color: blue;
 {
     min-width: 100px;
     font-size: 18px;
-    width: 101px;
+    width: 110px;
     height: 30px;
     border-radius: 6px;
     background-color: #ff9f22;
@@ -206,7 +216,7 @@ color: blue;
     font-size: 18px;
     height: 30px;
     border-radius: 6px;
-    background-color: #009e00;
+    background-color: #8576FF;
     color: #fff;
     cursor: pointer;
     border: 1px solid rgba(0,0,0,0.1);
@@ -293,4 +303,134 @@ color: blue;
     background-color: #fff;
     border: 2px solid rgba(0, 0, 0, 0.2);
     border-radius: 3px;
+}
+
+.insta, .faceb, .natura-1, .gotrendier{
+    width: 24px;
+    height: 24px;
+    text-align: right;
+  }
+
+.redes, #redes{
+    text-align: right;
+    font-size: 12px;
+    font-family: 'Ubuntu', sans-serif;
+    }
+
+    .redes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+
+-- PAGE CARA o CRUZ
+
+.caraCruz{
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        #575ce5 50%,
+        #f9fbfc 50%
+    ) fixed;
+}
+
+.tittle{
+    text-align: center;
+    padding: 15px;
+    margin: 10px;
+}
+.container_caraCruz{
+    background-color: #ffffff;
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: 15px 30px 35px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+.estadistica{
+    text-align: right;
+    color: #101020;
+    font-weight: 500;
+    line-height: 25px;
+}
+
+.moneda{
+    height: 150px;
+    width: 150px;
+    position: relative;
+    margin: 50px auto;
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.moneda img{
+    width: 145px;
+}
+
+.caras,.crucres{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+
+.caras{
+    transform: rotateX(180deg);
+}
+
+@keyframes spin-caras{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
+@keyframes spin-cruces{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#flip-button, #reset-button, #back-button {
+    width: 120px;
+    padding: 20px;
+    margin: 5px;
+    border: 2.5px solid #424ae0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#flip-button{
+    background-color: #424ae0;
+    color: #ffffff;
+}
+#flip-button:disabled{
+    background-color: #e1e0ee;
+    border-color: #e1e0ee;
+    color: #101020;
+}
+#reset-button, #back-button{
+    background-color: #ffffff;
+    color: #424ae0;
+}
+
+#back{
+    text-decoration: none;
 }
